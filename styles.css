@@ -1482,3 +1482,107 @@ p { margin: 0; color: var(--muted); }
     min-height: 50px;
   }
 }
+
+
+/* Final mobile fix: prevent horizontal overflow on subpage heroes */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 980px) {
+  .section-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 64px 24px 0 !important;
+    overflow: hidden !important;
+    background: var(--paper) !important;
+  }
+
+  .section-hero > .kicker,
+  .section-hero > h1,
+  .section-hero > p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    grid-column: auto !important;
+  }
+
+  .section-hero > .kicker {
+    order: 1;
+    margin-bottom: 18px !important;
+  }
+
+  .section-hero > h1 {
+    order: 2;
+    font-size: clamp(40px, 12vw, 54px) !important;
+    line-height: .96 !important;
+    margin-bottom: 26px !important;
+  }
+
+  .section-hero > p:not(.kicker) {
+    order: 3;
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+
+  .section-hero::before {
+    content: "" !important;
+    order: 4 !important;
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: calc(100% + 48px) !important;
+    height: 330px !important;
+    min-height: 330px !important;
+    margin: 42px -24px 0 !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 1 !important;
+    z-index: 0 !important;
+  }
+
+  .section-hero::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .brand img {
+    width: 220px !important;
+    max-width: calc(100vw - 120px) !important;
+  }
+
+  .section-hero {
+    padding: 58px 22px 0 !important;
+  }
+
+  .section-hero::before {
+    width: calc(100% + 44px) !important;
+    height: 300px !important;
+    min-height: 300px !important;
+    margin-left: -22px !important;
+    margin-right: -22px !important;
+  }
+
+  .chatbot-widget {
+    right: 14px !important;
+    bottom: 14px !important;
+  }
+
+  .chatbot-toggle {
+    padding: 0 18px !important;
+  }
+}
