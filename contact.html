@@ -15,7 +15,7 @@
   <a class="brand" href="index.html" aria-label="Kerieth Accounting Solutions home">
     <img src="assets/kerieth-logo.png" alt="Kerieth Accounting Solutions logo">
   </a>
-  <button class="menu-toggle" aria-label="Open menu">Menu</button>
+  <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -58,7 +58,7 @@
     <div class="calendly-copy">
       <p class="kicker small">Schedule directly</p>
       <h2>Choose a time that works for you.</h2>
-      <p>Book a free 30-minute consultation. The calendar below shows available times.</p>
+      <p>Book a free 30-minute consultation. The calendar below shows available times and keeps everything connected through Calendly.</p>
     </div>
     <div class="calendly-card">
       <iframe src="https://calendly.com/hello-kerieth/30min?hide_gdpr_banner=1&hide_event_type_details=1&background_color=ffffff&text_color=12161b&primary_color=12161b" title="Schedule a consultation with Kerieth Accounting Solutions"></iframe>
@@ -88,6 +88,36 @@
   </div>
   <div class="footer-bottom">© 2026 Kerieth Accounting Solutions, LLC. All rights reserved.</div>
 </footer>
+
+
+<div class="chatbot-widget" id="chatbotWidget" aria-live="polite">
+  <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open Kerieth assistant">
+    <span class="chatbot-dot"></span>
+    Ask Kerieth
+  </button>
+
+  <section class="chatbot-panel" id="chatbotPanel" aria-label="Kerieth website assistant">
+    <div class="chatbot-header">
+      <div>
+        <strong>Kerieth Assistant</strong>
+        <span>Website information only</span>
+      </div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Close assistant">×</button>
+    </div>
+
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="bot-message">
+        Hi, I can help with Kerieth’s services, contact details, and booking a consultation.
+      </div>
+    </div>
+
+    <form class="chatbot-form" id="chatbotForm">
+      <input id="chatbotInput" type="text" placeholder="Ask about services, pricing, contact..." autocomplete="off">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</div>
+
 
 <script src="script.js"></script>
 </body>
